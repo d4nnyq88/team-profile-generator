@@ -13,16 +13,32 @@ describe("Employee", () => {
     });
     
     test("Can set email via constructor arguments", () => {
-        const testValue = "test@test.com";
-        const e = new Employee("Bob", 1, testValue);
-        expect(e.email).toBe(testValue);
+        const email = "test@test.com";
+        const e = new Employee("Bob", 1, email);
+        expect(e.email).toBe(email);
+    });
+    
+    test("Can set Id via constructor arguments", () => {
+        const id = 2;
+        const e = new Employee("Bob", 2);
+        expect(e.id).toBe(id);
     });
     
     test("Can get name via getName()", () => {
-        const testValue = "Alice";
-        const e = new Employee(testValue);
-        expect(e.getName()).toBe(testValue);
+        const name = "Alice";
+        const e = new Employee(name);
+        expect(e.getName()).toBe(name);
     });
-
-    //test methods?
+    
+    test("Can get Id via getId()", () => {
+        const id = 1;
+        const e = new Employee("Bob", id);
+        expect(e.getId()).toBe(id);
+    });
+    
+    test("Can get role via getRole()", () => {
+        const role = "Employee";
+        const e = new Employee(role);
+        expect(e.getRole()).toBe(role);
+    });
 });

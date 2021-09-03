@@ -17,8 +17,6 @@ function writeFile(team) {
     fs.writeFileSync(outputPath, render(team), "utf-8");
 }
 
-console.log(render(team));
-
 function init() {
     inquirer
         .prompt([
